@@ -1,0 +1,78 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 05. 12. 23
+  Features:
+    - Added a water electrolysis recipe.
+  Balance:
+    - Doubled the energy density of hydrogen, halved all production and usage of it.
+    - Rebalanced rocket fuel production. Hydrogen rocket fuel now takes more hydrogen, and only outputs 1 rocket fuel. Methane rocket fuel changed to reflect this. Kerosene rocket fuel uses less kerosene.
+    - Sulfur recipe can now have productivity modules.
+    - Lubricant now uses sulfur. Lubricant can be made directly from Raw Fuel Oil without adding sulfur.
+    - Sulfur processing now uses steam and outputs water instead of hydrogen.
+  Bugfixes:
+    - Removed Diesel and Rubber, as they are unused.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 26. 04. 23
+  Features:
+    - Added a setting for higher tiers of Fractionators
+    - Added a setting for higher tiers of Gas Wellhead
+    - Hydrogen Sulfide now has a fuel value. And a pollution modifier.
+    - Fractionators are now assembling machines that need the recipe set.
+  Balance:
+    - Reduced how much Hydrogen Sulfide the sulfur recipe uses.
+    - Doubled Natural Gas Fractionation time from 0.5s to 1s
+    - Reduced the Methane used by rocket fuel
+    - Reduced the crafting time of both Hydrogen and Methane rocket fuel.
+    - Moved the Steam Methane Reforming recipe from the Syngas tech to Oil Processing.
+    - Tar sand processing is now a 1/1/1 ratio of chemical plants for the 3 steps
+    - Tar sand now makes more for the same amount of tar sand
+    - Reduced time on Bitumen fractionation
+  Bugfixes:
+    - Fractionator Entity Icons now also show their fuel input type
+    - Fixed the Gasifier fluidboxes being *weird*
+	- Fixed the changelog using tabs so it can't show up in-game
+	- Localised the Methane Reforming recipe
+	- Locked the Gasifier recipe behind the same tech as the Gasifier
+	- Locked all the fractionators behind having oil
+    - Fixed infinite syngas
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 12. 04. 23
+  Features:
+    - Stone in the latter 2 Tar Sand processing recipes is replaced with sand if it exists, or silica if that exists and sand doesn't."
+    - Added an incompatibility with Brevven's Natural Gas
+  Bugfixes:
+    - Sand is no longer present unless another mod adds it. Tar sand processing now uses all stone by default. For real this time
+    - Kerosene is no longer hydrogen hungry.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 11. 04. 23
+  Features:
+    - Carbon is replaced with Coke, if Brevven's Foundry is present.
+    - Stone in the latter 2 Tar Sand processing recipes is replaced with sand if it exists, or silica if that exists and sand doesn't.
+    - Reduced how much sulfur is produced.
+  Bugfixes:
+    - Fixed the Aromatics Sulfur recipe not showing up.
+    - Sand is no longer present unless another mod adds it. Tar sand processing now uses all stone by default.
+    - Fixed the icon size for tar sand and bitumen
+    - Removed fracking. It wasn't supposed to exist.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 18. 12. 22
+  Features:
+    - Added special compat for Graphite & Diamonds by Brevven.
+  Bugfixes:
+    - Fixed SE messing with my stuff
+    - Fixed Sulfur Separation not being added to the sulfur tech.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 18. 09. 22
+  Bugfixes:
+    - Fixed missing graphics 
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 17. 09. 22
+  Major Features:
+    - Initial release
