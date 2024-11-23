@@ -5,7 +5,7 @@ local JamesOilProductivity = {}
 LSlib.recipe.duplicate("lubricant", "clean-lubricant")
 LSlib.recipe.editIngredient("lubricant", "heavy-oil", "VPE-fuel-oil", 1)
 LSlib.recipe.addIngredient("clean-lubricant", "sulfur", 1, "item")
-LSlib.technology.addRecipeUnlock("sulfur-processing", "clean-lubricant")
+
 
 table.insert(JamesOilProductivity, "clean-lubricant")
 
@@ -170,7 +170,7 @@ data:extend({
 				name = "adamo-carbon-methane",
 				amount = 50
 		}},
-		result = "solid-fuel",
+		results = {{type="item", name="solid-fuel", amount=1}},
 		icon = "__James-Oil-Processing__/graphics/icons/solid-fuel-from-methane.png",
 		icon_size = 32,
 		subgroup = "fluid-recipes",

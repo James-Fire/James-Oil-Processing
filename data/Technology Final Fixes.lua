@@ -1,3 +1,5 @@
+LSlib.technology.addRecipeUnlock("sulfur-processing", "clean-lubricant")
+
 data.raw.technology["advanced-oil-processing"].icon_size = 256 
 data.raw.technology["advanced-oil-processing"].icon_mipmaps = 4
 data.raw.technology["advanced-oil-processing"].icon = "__James-Oil-Processing__/graphics/technology/advanced-oil-processing.png"

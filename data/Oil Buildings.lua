@@ -10,7 +10,7 @@ local fraccraft = {"james-oil-processing"}
 local natural_gas_wellhead_entity = table.deepcopy(data.raw["mining-drill"].pumpjack)
 natural_gas_wellhead_entity.name = "adamo-carbon-gas-wellhead-1"
 natural_gas_wellhead_entity.resource_categories = {"adamo-carbon-gas"}
-natural_gas_wellhead_entity.energy_source.emissions_per_minute = 6
+natural_gas_wellhead_entity.energy_source.emissions_per_minute = { pollution = 6 }
 natural_gas_wellhead_entity.energy_usage = "60kW"
 natural_gas_wellhead_entity.icon_size = 32
 natural_gas_wellhead_entity.icon = "__James-Oil-Processing__/graphics/icons/natural-gas-wellhead.png"
@@ -64,16 +64,6 @@ natural_gas_wellhead_entity.animations = {
 	filename = "__James-Oil-Processing__/graphics/blank.png",
 	size = 32,
 }
-natural_gas_wellhead_entity.working_sound = {
-      sound =
-      {
-		{
-          filename = "__base__/sound/pumpjack.ogg",
-          volume = 0.7
-        },
-	},
-}
-natural_gas_wellhead_entity.collision_mask = {"item-layer", "object-layer", "water-tile"}
 
 local natural_gas_wellhead_item = table.deepcopy(data.raw.item.pumpjack)
 natural_gas_wellhead_item.name = "adamo-carbon-gas-wellhead-1"
@@ -90,18 +80,14 @@ data:extend({
 		name = "adamo-carbon-gas-wellhead-1",
 		enabled = false,
 		energy_required = 2,
-		ingredients = {{
-				"electronic-circuit",5
-			},{
-				"iron-plate",5
-			},{
-				"pipe",10
-			},{
-				"steel-plate",2
-			},{
-				"pump",1
-		}},
-		result = "adamo-carbon-gas-wellhead-1"
+		ingredients = {
+			{type="item", name="electronic-circuit", amount=5},
+			{type="item", name="iron-plate", amount=5},
+			{type="item", name="pipe", amount=10},
+			{type="item", name="steel-plate", amount=2},
+			{type="item", name="pump", amount=1},
+		},
+		results = {{type="item", name="adamo-carbon-gas-wellhead-1", amount=1}}
 	}
 })
 
@@ -114,7 +100,7 @@ if settings.startup["higher-tier-gas-wellheads"].value then
 		natural_gas_wellhead_entity.resource_categories = {"adamo-carbon-gas"}
 		natural_gas_wellhead_entity.energy_usage = tostring(Num*60).."kW"
 		natural_gas_wellhead_entity.mining_speed = data.raw["mining-drill"]["adamo-carbon-gas-wellhead-1"].mining_speed*Num
-		natural_gas_wellhead_entity.module_specification.module_slots = Num+1
+		natural_gas_wellhead_entity.module_slots = Num+1
 		
 		local natural_gas_wellhead_item = table.deepcopy(data.raw.item["adamo-carbon-gas-wellhead-1"])
 		natural_gas_wellhead_item.name = "adamo-carbon-gas-wellhead-"..tostring(Num)
@@ -148,8 +134,8 @@ if settings.startup["higher-tier-gas-wellheads"].value then
 			unit = {
 				count = 50,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1}
 				},
 				time = 30,
 			},
@@ -170,9 +156,9 @@ if settings.startup["higher-tier-gas-wellheads"].value then
 			unit = {
 				count = 50,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1},
-					{"chemical-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
 				},
 				time = 30,
 			},
@@ -193,9 +179,9 @@ if settings.startup["higher-tier-gas-wellheads"].value then
 			unit = {
 				count = 100,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1},
-					{"chemical-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
 				},
 				time = 30,
 			},
@@ -216,10 +202,10 @@ if settings.startup["higher-tier-gas-wellheads"].value then
 			unit = {
 				count = 100,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1},
-					{"chemical-science-pack",1},
-					{"production-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
+					{"production-science-pack", 1},
 				},
 				time = 30,
 			},
@@ -243,7 +229,7 @@ data:extend({
 		max_health = 250,
 		corpse = "big-remnants",
 		dying_explosion = "medium-explosion",
-		collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
+		collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
 		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 		crafting_categories = {"adamo-carbon-gasification"},
 		crafting_speed = 1,
@@ -252,7 +238,7 @@ data:extend({
 			type = "burner",
 			effectivity = 1,
 			fuel_inventory_size = 1,
-			emissions_per_minute = 1,
+			emissions_per_minute = { pollution = 1 },
 			light_flicker = {
 				minimum_intensity = 0.5,
 				maximum_intensity = 1
@@ -314,26 +300,24 @@ data:extend({
 			production_type = "input",
 			pipe_picture = assembler2pipepictures(),
 			secondary_draw_orders = {
-				north=-1,south=-1,east=-1,west=-1
+				north=-0.4,south=-0.4,east=-0.4,west=-0.4
 			},
 			pipe_covers = pipecoverspictures(),
-			base_area = 1,
-			base_level = -1,
+			volume = 1000,
 			pipe_connections = {
-				{type="input", position = {0, 1} }
+				{flow_direction="input", direction = defines.direction.north, position = {0, 0.4} }
 			}
 		},
 		{
 			production_type = "output",
 			pipe_picture = assembler2pipepictures(),
 			secondary_draw_orders = {
-				north=-1,south=-1,east=-1,west=-1
+				north=-0.4,south=-0.4,east=-0.4,west=-0.4
 			},
 			pipe_covers = pipecoverspictures(),
-			base_area = 1,
-			base_level = 1,
+			volume = 1000,
 			pipe_connections = { 
-				{ type="output", position = {0, -1} }
+				{ flow_direction="output", direction = defines.direction.south, position = {0, -0.4} }
 			}
 		  }
 		},
@@ -362,31 +346,25 @@ data:extend({
 		type = "recipe",
 		name = "adamo-carbon-gasifier",
 		enabled = false,
-		ingredients = {{
-				"stone-brick",5
-			},{
-				"pipe",5
-			},{
-				"pump",2
-			},{
-				"electronic-circuit",2
-		}},
-		result = "adamo-carbon-gasifier"
+		ingredients = {
+			{type="item", name="stone-brick", amount=5},
+			{type="item", name="pipe", amount=5},
+			{type="item", name="pump", amount=2},
+			{type="item", name="electronic-circuit", amount=2}
+		},
+		results = {{type="item", name="adamo-carbon-gasifier", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "adamo-carbon-gasifier-fluid",
 		enabled = false,
-		ingredients = {{
-				"stone-brick",5
-			},{
-				"pipe",5
-			},{
-				"pump",2
-			},{
-				"electronic-circuit",2
-		}},
-		result = "adamo-carbon-gasifier-fluid"
+		ingredients = {
+			{type="item", name="stone-brick", amount=5},
+			{type="item", name="pipe", amount=5},
+			{type="item", name="pump", amount=2},
+			{type="item", name="electronic-circuit", amount=2}
+		},
+		results = {{type="item", name="adamo-carbon-gasifier-fluid", amount=1}},
 	}
 })
 local fluid_gasifier_item = table.deepcopy(data.raw.item["adamo-carbon-gasifier"])
@@ -397,23 +375,23 @@ fluid_gasifier.name = "adamo-carbon-gasifier-fluid"
 fluid_gasifier.minable.result = "adamo-carbon-gasifier-fluid"
 fluid_gasifier.energy_source = {
 	type = "fluid",
-	emissions_per_minute = 1,
+	emissions_per_minute = { pollution = 1 },
 	burns_fluid = true,
 	scale_fluid_usage = true,
 	fluid_box = {
 		pipe_connections = {
 			{
-				type = "input-output",
-				position = {-1,0},
+				flow_direction = "input-output",
+				position = {-0.4,0},
+				direction = defines.direction.west
 			},
 			{
-				type = "input-output",
-				position = {1,0},
+				flow_direction = "input-output",
+				position = {0.4,0},
+				direction = defines.direction.east
 			}
 		},
-		base_area = 1,
-		base_level = -1,
-		height = 2,
+		volume = 2000,
 		pipe_covers = pipecoverspictures(),
 		pipe_picture = assembler2pipepictures(),
 		production_type = "input-output",
@@ -450,13 +428,13 @@ data:extend({
 		enabled = false,
 		energy_required = 3,
 		ingredients = {
-		  {"steel-plate", 15},
-		  {"iron-gear-wheel", 10},
-		  {"stone-brick", 10},
-		  {"electronic-circuit", 10},
-		  {"pipe", 10}
+		  {type="item", name="steel-plate", amount=15},
+		  {type="item", name="iron-gear-wheel", amount=10},
+		  {type="item", name="stone-brick", amount=10},
+		  {type="item", name="electronic-circuit", amount=10},
+		  {type="item", name="pipe", amount=10}
 		},
-		results = {{"electric-fractionator-1",1}}
+		results = {{type="item", name="electric-fractionator-1", amount=1}}
 	},
 	{
 		type = "assembling-machine",
@@ -500,39 +478,38 @@ data:extend({
 		  {
 			production_type = "input",
 			pipe_covers = pipecoverspictures(),
-			base_area = 10,
-			base_level = -1,
-			pipe_connections = {{ type="input", position = {-2, 0} }}
+			volume = 1000,
+			pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {-1, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			base_level = 1,
-			pipe_connections = {{ position = {2, 2} }}
+			volume = 1000,
+			pipe_connections = {{ direction = defines.direction.south, position = {1, 2} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			base_level = 1,
-			pipe_connections = {{ position = {2, 1} }}
+			volume = 1000,
+			pipe_connections = {{ direction = defines.direction.south, position = {1, 1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			base_level = 1,
-			pipe_connections = {{ position = {2, 0} }}
+			volume = 1000,
+			pipe_connections = {{ direction = defines.direction.south, position = {1, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			base_level = 1,
-			pipe_connections = {{ position = {2, -1} }}
+			volume = 1000,
+			pipe_connections = {{ direction = defines.direction.south, position = {1, -1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			base_level = 1,
-			pipe_connections = {{ position = {2, -2} }}
+			volume = 1000,
+			pipe_connections = {{ direction = defines.direction.south, position = {1, -2} }}
 		  },
 		},
 		energy_source =
@@ -811,7 +788,7 @@ heat_fractionator.name = "heat-fractionator-1"
 heat_fractionator.minable.result = "heat-fractionator-1"
 heat_fractionator.energy_source = {
 	type = "heat",
-	emissions_per_minute = 0,
+	emissions_per_minute = { pollution = 0 },
 	max_temperature = 500,
 	specific_heat = "2MJ",
 	max_transfer = "5GW",
@@ -828,7 +805,7 @@ heat_fractionator.energy_source = {
 	},
 	pipe_covers = make_4way_animation_from_spritesheet({
 		filename = "__base__/graphics/entity/".."heat-exchanger/heatex-endings.png",
-		line_length = 4,
+		--line_length = 4,
 		width = 32,
 		height = 32,
 		direction_count = 4,
@@ -868,23 +845,23 @@ fluid_fractionator.name = "fluid-fractionator-1"
 fluid_fractionator.minable.result = "fluid-fractionator-1"
 fluid_fractionator.energy_source = {
 	type = "fluid",
-	emissions_per_minute = 1,
+	emissions_per_minute = { pollution = 1 },
 	burns_fluid = true,
 	scale_fluid_usage = true,
 	fluid_box = {
 		pipe_connections = {
 			{
-				type = "input-output",
-				position = {0,-3},
+				flow_direction = "input-output",
+				position = {0,-2},
+				direction = defines.direction.west, 
 			},
 			{
-				type = "input-output",
-				position = {0,3},
+				flow_direction = "input-output",
+				position = {0,2},
+				direction = defines.direction.east, 
 			}
 		},
-		base_area = 1,
-		base_level = -1,
-		height = 2,
+		volume = 2000,
 		pipe_covers = pipecoverspictures(),
 		pipe_picture = assembler2pipepictures(),
 		production_type = "input-output",
@@ -907,10 +884,10 @@ burner_fractionator.name = "burner-fractionator-1"
 burner_fractionator.minable.result = "burner-fractionator-1"
 burner_fractionator.energy_source = {
 	type = "burner",
-	fuel_category = "chemical",
+	fuel_categories = { "chemical" },
 	effectivity = 1,
 	fuel_inventory_size = 1,
-	emissions_per_minute = 4,
+	emissions_per_minute = { pollution = 4 },
 	smoke = {
 		{
 			name = "smoke",
@@ -952,13 +929,13 @@ data:extend({
 		enabled = false,
 		energy_required = 3,
 		ingredients = {
-		  {"steel-plate", 15},
-		  {"iron-gear-wheel", 10},
-		  {"stone-brick", 10},
-		  {"electronic-circuit", 10},
-		  {"pipe", 10}
+		  {type="item", name="steel-plate", amount=15},
+		  {type="item", name="iron-gear-wheel", amount=10},
+		  {type="item", name="stone-brick", amount=10},
+		  {type="item", name="electronic-circuit", amount=10},
+		  {type="item", name="pipe", amount=10}
 		},
-		results = {{"heat-fractionator-1",1}}
+		results = {{type="item", name="heat-fractionator-1", amount=1}}
 	},
 	{
 		type = "item",
@@ -992,13 +969,13 @@ data:extend({
 		enabled = false,
 		energy_required = 3,
 		ingredients = {
-		  {"steel-plate", 15},
-		  {"iron-gear-wheel", 10},
-		  {"stone-brick", 10},
-		  {"electronic-circuit", 10},
-		  {"pipe", 10}
+		  {type="item", name="steel-plate", amount=15},
+		  {type="item", name="iron-gear-wheel", amount=10},
+		  {type="item", name="stone-brick", amount=10},
+		  {type="item", name="electronic-circuit", amount=10},
+		  {type="item", name="pipe", amount=10}
 		},
-		results = {{"fluid-fractionator-1",1}}
+		results = {{type="item", name="fluid-fractionator-1", amount=1}}
 	},
 	{
 		type = "item",
@@ -1026,13 +1003,13 @@ data:extend({
 		enabled = false,
 		energy_required = 3,
 		ingredients = {
-		  {"steel-plate", 15},
-		  {"iron-gear-wheel", 10},
-		  {"stone-brick", 10},
-		  {"electronic-circuit", 10},
-		  {"pipe", 10}
+		  {type="item", name="steel-plate", amount=15},
+		  {type="item", name="iron-gear-wheel", amount=10},
+		  {type="item", name="stone-brick", amount=10},
+		  {type="item", name="electronic-circuit", amount=10},
+		  {type="item", name="pipe", amount=10}
 		},
-		results = {{"burner-fractionator-1",1}}
+		results = {{type="item", name="burner-fractionator-1", amount=1}}
 	},
 })
 local FracTable = { "electric-fractionator-1", "heat-fractionator-1", "fluid-fractionator-1", "burner-fractionator-1" }
@@ -1059,8 +1036,8 @@ if settings.startup["higher-tier-fractionators"].value then
 			unit = {
 				count = 50,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
 				},
 				time = 30,
 			},
@@ -1086,9 +1063,9 @@ if settings.startup["higher-tier-fractionators"].value then
 			unit = {
 				count = 50,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1},
-					{"chemical-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
 				},
 				time = 30,
 			},
@@ -1114,10 +1091,10 @@ if settings.startup["higher-tier-fractionators"].value then
 			unit = {
 				count = 50,
 				ingredients = {
-					{"automation-science-pack",1},
-					{"logistic-science-pack",1},
-					{"chemical-science-pack",1},
-					{"production-science-pack",1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
+					{"production-science-pack", 1},
 				},
 				time = 30,
 			},

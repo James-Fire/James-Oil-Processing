@@ -1,10 +1,8 @@
 local resource_autoplace = require("resource-autoplace")
-data:extend({
-	{
-		type = "noise-layer",
-		name = "VPE-tarsand"
-	},
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["VPE-tarsand"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["adamo-carbon-natural-gas"] = {}
 
+data:extend({
 	{
 		type = "resource",
 		name = "VPE-tarsand",
@@ -19,7 +17,7 @@ data:extend({
 		  hardness = 0.9,
 		  mining_particle = "stone-particle",
 		  mining_time = 2,
-		  result = "VPE-tarsand",
+		  results = {{type="item", name="VPE-tarsand", amount=1}},
 		  fluid_amount = 20,
 		  required_fluid = "steam"
 		},
@@ -28,7 +26,8 @@ data:extend({
 		autoplace =
 		{
 		  order = "c",
-		  control = "VPE-tarsand", 
+		  control = "VPE-tarsand",
+		  probability_expression = "clamp(var('" .. "VPE-tarsand" .. "'), 0, 1)",
 		  sharpness = 1,
 		  richness_multiplier = 2,
 		  richness_multiplier_distance_bonus = 2.5,
@@ -53,7 +52,7 @@ data:extend({
 		  
 		},
 			
-		 stage_counts = {10000, 5200, 2600, 1800, 1200, 800, 400, 80},
+		stage_counts = {2600, 1800, 1200, 800, 400, 320, 160, 80},
 		stages =
 		{
 		  sheet =

@@ -18,7 +18,7 @@ data:extend({
 		type = "fluid",
 		name = "hydrogen",
 		default_temperature = 25,
-		heat_capacity = "1KJ",
+		heat_capacity = "1kJ",
 		base_color = {r=0.7, g=0.7, b=0.7},
 		flow_color = {r=1, g=1, b=1},
 		max_temperature = 100,
@@ -44,7 +44,7 @@ data:extend({
 		flow_color = {r=244,g=204,b=204},
 		default_temperature = 25,
 		max_temperature = 750,
-		heat_capacity = "0.05KJ",
+		heat_capacity = "0.05kJ",
 		emissions_multiplier=0.5
 	},
 	{
@@ -57,7 +57,7 @@ data:extend({
 		flow_color = {r=204,g=204,b=204},
 		default_temperature = 25,
 		max_temperature = 750,
-		heat_capacity = "0.05KJ",
+		heat_capacity = "0.05kJ",
 		emissions_multiplier=0.5,
 	},
 	{
@@ -70,13 +70,13 @@ data:extend({
 		flow_color = {},
 		default_temperature = 25,
 		max_temperature = 750,
-		heat_capacity = "0.05KJ",
+		heat_capacity = "0.05kJ",
 		emissions_multiplier=0.5,
 	},
   {
     type = "fluid",
     name = "VPE-tar-slurry",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	default_temperature = 25,
     max_temperature = 100,
     base_color = {r=0.1, g=0.1, b=0.1},
@@ -90,7 +90,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-bitumen-froth",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	default_temperature = 25,
     max_temperature = 100,
     base_color = {r=0.1, g=0.1, b=0.1},
@@ -104,7 +104,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-short-residue",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	default_temperature = 25,
     max_temperature = 100,
 	fuel_category = "chemical",
@@ -121,7 +121,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-long-residue",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	default_temperature = 25,
     max_temperature = 100,
 	fuel_category = "chemical",
@@ -143,7 +143,7 @@ data:extend({
 	fuel_category = "chemical",
     fuel_value = "1.5MJ",
 	emissions_multiplier = 0.8,
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     base_color = {r=0.3, g=0.1, b=0.3},
     flow_color = {r=0.8, g=0.8, b=0.8},
     max_temperature = 100,
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "fluid",
     name = "heavy-oil",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	fuel_category = "chemical",
     fuel_value = "1.2MJ",
 	emissions_multiplier = 1.5,
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-fuel-oil",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
     fuel_value = "1.6MJ",
 	emissions_multiplier = 1.25,
@@ -192,7 +192,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-raw-kerosene",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	fuel_category = "chemical",
         fuel_value = "1.1MJ",
 		emissions_multiplier = 1.5,
@@ -210,7 +210,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-kerosene",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
 	fuel_value = "1.8MJ",
 	emissions_multiplier = 1.0,
@@ -229,7 +229,7 @@ data:extend({
   {
     type = "fluid",
     name = "light-oil",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
 	fuel_category = "chemical",
     fuel_value = "1.1MJ",
 	emissions_multiplier = 1.5,
@@ -248,7 +248,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-naphta",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
     fuel_value = "1.3MJ",
 	emissions_multiplier = 1.25,
@@ -266,7 +266,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-olefines",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
 	default_temperature = 25,
     max_temperature = 100,
@@ -282,7 +282,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-reformate",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
     fuel_value = "1.4MJ",
 	emissions_multiplier = 1.1,
@@ -300,7 +300,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-gasoline",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
     fuel_value = "1.8MJ",
 	emissions_multiplier = 1.0,
@@ -318,7 +318,7 @@ data:extend({
 {
     type = "fluid",
     name = "VPE-aromatics",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
 	default_temperature = 25,
     max_temperature = 100,
@@ -334,7 +334,7 @@ data:extend({
   {
     type = "fluid",
     name = "VPE-pygas",
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     fuel_category = "chemical",
         fuel_value = "1.0MJ",
 		emissions_multiplier = 1.25,
@@ -358,7 +358,7 @@ data:extend({
     default_temperature = 25,
     max_temperature = 100,
     gas_temperature = -60,
-    heat_capacity = "1KJ",
+    heat_capacity = "1kJ",
     base_color = {r=0.7, g=0.7, b=0},
     flow_color = {r=1, g=1, b=0.5}
   },
@@ -368,7 +368,7 @@ data:extend({
       icon = "__James-Oil-Processing__/graphics/sour-gas.png",
       icon_size = 64,
       default_temperature = 25,
-      heat_capacity = "0.1KJ",
+      heat_capacity = "0.1kJ",
       base_color = {r=0.4, g=0.1, b=0.3},
       flow_color = {r=0.8, g=0.2, b=0.6},
       max_temperature = 100,
