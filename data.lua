@@ -1,4 +1,4 @@
-require("__LSlib__/LSlib")
+require("__LSlib_James_Fork__/LSlib")
 
 
 
