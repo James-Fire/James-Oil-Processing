@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
-Date: 12. 29. 24
+Date: 12. 04. 24
   Bugfixes:
     - Fixed Rocketfuel recipes using a non-vanilla icon for some reason
     - Fixed missing loc
