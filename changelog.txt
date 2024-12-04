@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 12. 29. 24
+  Bugfixes:
+    - Fixed Rocketfuel recipes using a non-vanilla icon for some reason
+    - Fixed missing loc
+    - Fixed chemical plants not being able to do my recipes if Space Age is active
+    - Fixed tiered fractionators not appearing, apparently 
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 11. 29. 24
+  Bugfixes:
+    - Fixed building graphics for the fractionators and gasifiers
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 11. 25. 24
+  Bugfixes:
+    - Fixed resources not spawning
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 11. 23. 24
   Bugfixes:
