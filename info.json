@@ -4,6 +4,7 @@
   "title": "James Oily Extravaganza",
   "author": "James Fire",
   "description": "Oil refining incorporating real-world processes, products, and recipes.",
+  "homepage": "https://github.com/James-Fire/James-Oil-Processing",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 0.17.44",
