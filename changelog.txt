@@ -1,4 +1,37 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 12. 14. 24
+  Bugfixes:
+    - Localized Gasoline Solid Fuel recipe because it doesn't happen automatically anymore.
+	- Fixed icon sizing on gasoline solid fuel recipe
+---------------------------------------------------------------------------------------------------
+Version: 2.0.10
+Date: 12. 13. 24
+  Features:
+    - Solid Fuel can now be made from Gasoline, unlocked by Oil Processing
+  Bugfixes:
+    - Simple Coal Liquefaction now gives Raw Fuel Oil
+---------------------------------------------------------------------------------------------------
+Version: 2.0.9
+Date: 12. 13. 24
+  Bugfixes:
+    - Tar Sand Mining now allows you to mine with fluid so you can actually *use* tar sand.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 12. 07. 24
+  Bugfixes:
+    - Maybe fixed sulfur recipe not showing up in some cases for real this time
+---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 12. 07. 24
+  Bugfixes:
+    - Maybe fixed sulfur recipe not showing up in some cases?
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 12. 05. 24
+  Balance:
+    - Sulfur Separation now uses the right amount of steam
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 12. 05. 24
   Features:

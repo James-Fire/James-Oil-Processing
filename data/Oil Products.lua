@@ -159,21 +159,64 @@ table.insert(JamesOilProductivity, "methane-rocket-fuel")
 
 --Acids
 
+--sulfur
+data:extend({
+	{
+		type = "recipe",
+		name = "sulfur-separation",
+		category = "chemistry",
+		subgroup = "fluid-recipes",
+		order = "f[sulfur]",
+		energy_required = 1,
+		enabled = false,
+		main_product= "sulfur",
+		ingredients = {
+			{type = "fluid", name = "hydrogen-sulfide", amount = 20},
+			{type="fluid", name="steam", amount=100},
+		},
+		results = {
+			{type="item", name="sulfur", amount=2},
+			{type="fluid", name="water", amount=15},
+		},
+		crafting_machine_tint = {
+			primary = {r = 1.000, g = 0.659, b = 0.000},
+			secondary = {r = 1.0, g = 0.000, b = 0.000},
+			tertiary = {r = 0.960, g = 0.806, b = 0.000},
+		},
+		allow_decomposition = false
+	},
+})
+for km, vm in pairs(data.raw.module) do
+	if vm.effect.productivity and vm.limitation then
+		table.insert(vm.limitation, "sulfur-separation")
+	end
+end
+
 --Solid Fuel
 data:extend({
 	{
 		type = "recipe",
-		name = "adamo-carbon-solid-fuel-from-methane",
+		name = "solid-fuel-from-gasoline",
 		category = "chemistry",
 		energy_required = 2,
 		ingredients = {{
 				type = "fluid",
-				name = "adamo-carbon-methane",
-				amount = 50
+				name = "VPE-gasoline",
+				amount = 10
 		}},
 		results = {{type="item", name="solid-fuel", amount=1}},
-		icon = "__James-Oil-Processing__/graphics/icons/solid-fuel-from-methane.png",
-		icon_size = 32,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/solid-fuel.png",
+				icon_size = 64,
+			},
+			{
+				icon = "__James-Oil-Processing__/graphics/gasoline.png",
+				icon_size = 32,
+				scale = 1 / 2,
+				shift = {6, -6},
+			},
+		},
 		subgroup = "fluid-recipes",
 		enabled = false,
 		order = 
