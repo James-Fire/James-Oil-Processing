@@ -258,31 +258,34 @@ data:extend({
 		ingredient_count = 0,
 		source_inventory_size = 0,
 		result_inventory_size = 0,
-		animation = {
-			filename =
-				"__James-Oil-Processing__/graphics/entity/"
-				.."gasifier.png",
-			priority="high",
-			width = 160,
-			height = 160,
-			frame_count = 1,
-			shift = {1.5, -1.59375}
+		graphics_set =
+		{
+			animation = {
+				filename =
+					"__James-Oil-Processing__/graphics/entity/"
+					.."gasifier.png",
+				priority="high",
+				width = 160,
+				height = 160,
+				frame_count = 1,
+				shift = {1.5, -1.59375}
+			},
+			working_visualisations = {{
+					animation = {
+						filename =
+							"__James-Oil-Processing__/graphics/entity/"
+							.."gasifier-fumes.png",
+						priority = "extra-high",
+						frame_count = 29,
+						width = 48,
+						height = 105,
+						shift = {-0.05, -5.65},
+						animation_speed = 0.5,
+						scale = 1.5,
+						run_mode="backward"
+					}
+			}},
 		},
-		working_visualisations = {{
-				animation = {
-					filename =
-						"__James-Oil-Processing__/graphics/entity/"
-						.."gasifier-fumes.png",
-					priority = "extra-high",
-					frame_count = 29,
-					width = 48,
-					height = 105,
-					shift = {-0.05, -5.65},
-					animation_speed = 0.5,
-					scale = 1.5,
-					run_mode="backward"
-				}
-		}},
 		vehicle_impact_sound = {
 		  filename = "__base__/sound/car-metal-impact.ogg",
 		  volume = 0.65
@@ -298,26 +301,18 @@ data:extend({
 		},
 		fluid_boxes = {{
 			production_type = "input",
-			pipe_picture = assembler2pipepictures(),
-			secondary_draw_orders = {
-				north=-0.4,south=-0.4,east=-0.4,west=-0.4
-			},
 			pipe_covers = pipecoverspictures(),
 			volume = 1000,
 			pipe_connections = {
-				{flow_direction="input", direction = defines.direction.north, position = {0, 0.4} }
+				{flow_direction="input", direction = defines.direction.north, position = {0, -0.2} }
 			}
 		},
 		{
 			production_type = "output",
-			pipe_picture = assembler2pipepictures(),
-			secondary_draw_orders = {
-				north=-0.4,south=-0.4,east=-0.4,west=-0.4
-			},
 			pipe_covers = pipecoverspictures(),
 			volume = 1000,
 			pipe_connections = { 
-				{ flow_direction="output", direction = defines.direction.south, position = {0, -0.4} }
+				{ flow_direction="output", direction = defines.direction.south, position = {0, 0.2} }
 			}
 		  }
 		},
@@ -382,18 +377,17 @@ fluid_gasifier.energy_source = {
 		pipe_connections = {
 			{
 				flow_direction = "input-output",
-				position = {-0.4,0},
+				position = {-0.2,0},
 				direction = defines.direction.west
 			},
 			{
 				flow_direction = "input-output",
-				position = {0.4,0},
+				position = {0.2,0},
 				direction = defines.direction.east
 			}
 		},
-		volume = 2000,
+		volume = 1000,
 		pipe_covers = pipecoverspictures(),
-		pipe_picture = assembler2pipepictures(),
 		production_type = "input-output",
 	},
 }
@@ -478,38 +472,44 @@ data:extend({
 		  {
 			production_type = "input",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {-1, 0} }}
+			pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1.15, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ direction = defines.direction.south, position = {1, 2} }}
+			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 2} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ direction = defines.direction.south, position = {1, 1} }}
+			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ direction = defines.direction.south, position = {1, 0} }}
+			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ direction = defines.direction.south, position = {1, -1} }}
+			pipe_connections = {{ direction = defines.direction.east, position = {1.15, -1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			volume = 1000,
-			pipe_connections = {{ direction = defines.direction.south, position = {1, -2} }}
+			pipe_connections = {{ direction = defines.direction.east, position = {1.15, -2} }}
 		  },
 		},
 		energy_source =
@@ -522,6 +522,8 @@ data:extend({
 			module_slots = 2
 		},
 		energy_usage = tostring(fracpower).."kW",
+		graphics_set =
+		{
 		animation =
 		{
 		  west = {
@@ -721,6 +723,7 @@ data:extend({
 		  }
 		},
 		},
+		},
 		
 		smoke =
 		{
@@ -795,31 +798,71 @@ heat_fractionator.energy_source = {
 	min_working_temperature = 200,
 	connections = {
 		{
-		  position = {0,-2},
+		  position = {0,-2.25},
 		  direction = defines.direction.north
 		},
 		{
-		  position = {0,2},
+		  position = {0,2.25},
 		  direction = defines.direction.south
 		},
 	},
-	pipe_covers = make_4way_animation_from_spritesheet({
-		filename = "__base__/graphics/entity/".."heat-exchanger/heatex-endings.png",
-		--line_length = 4,
-		width = 32,
-		height = 32,
-		direction_count = 4,
-		hr_version = {
-			filename = 
-			  "__base__/graphics/entity/"
-			  .."heat-exchanger/hr-heatex-endings.png",
-			line_length = 4,
-			width = 64,
-			height = 64,
-			direction_count = 4,
-			scale = 0.5
-		}
-	}),
+	pipe_covers =
+        make_4way_animation_from_spritesheet(
+        {
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+          width = 64,
+          height = 64,
+          direction_count = 4,
+          scale = 0.5
+        }),
+      heat_pipe_covers =
+        make_4way_animation_from_spritesheet(
+        apply_heat_pipe_glow{
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+          width = 64,
+          height = 64,
+          direction_count = 4,
+          scale = 0.5
+        }),
+      heat_picture =
+      {
+        north = apply_heat_pipe_glow
+        {
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-N-heated.png",
+          priority = "extra-high",
+          width = 44,
+          height = 96,
+          shift = util.by_pixel(-0.5, 8.5),
+          scale = 0.5
+        },
+        east = apply_heat_pipe_glow
+        {
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-E-heated.png",
+          priority = "extra-high",
+          width = 80,
+          height = 80,
+          shift = util.by_pixel(-21, -13),
+          scale = 0.5
+        },
+        south = apply_heat_pipe_glow
+        {
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-S-heated.png",
+          priority = "extra-high",
+          width = 28,
+          height = 40,
+          shift = util.by_pixel(-1, -30),
+          scale = 0.5
+        },
+        west = apply_heat_pipe_glow
+        {
+          filename = "__base__/graphics/entity/heat-exchanger/heatex-W-heated.png",
+          priority = "extra-high",
+          width = 64,
+          height = 76,
+          shift = util.by_pixel(23, -13),
+          scale = 0.5
+        }
+      },
 }
 	
 local fluid_fractionator = table.deepcopy(data.raw["assembling-machine"]["electric-fractionator-1"])
@@ -852,13 +895,13 @@ fluid_fractionator.energy_source = {
 		pipe_connections = {
 			{
 				flow_direction = "input-output",
-				position = {0,-2},
-				direction = defines.direction.west, 
+				position = {0,-2.25},
+				direction = defines.direction.north, 
 			},
 			{
 				flow_direction = "input-output",
-				position = {0,2},
-				direction = defines.direction.east, 
+				position = {0,2.25},
+				direction = defines.direction.south, 
 			}
 		},
 		volume = 2000,

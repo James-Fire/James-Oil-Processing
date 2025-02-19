@@ -13,9 +13,9 @@ data:extend({
             {type="fluid", name="steam", amount=100},
         },
         results = {
- 	    {type="fluid", name="light-oil", amount=50},
-	    {type="fluid", name="VPE-olefines", amount=40},
-		{type="fluid", name="petroleum-gas", amount=20},
+			{type="fluid", name="light-oil", amount=50},
+			{type="fluid", name="VPE-olefines", amount=40},
+			{type="fluid", name="petroleum-gas", amount=20},
            
         },
 		icons = {

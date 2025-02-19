@@ -30,6 +30,14 @@ data.raw.technology["sulfur-processing"].effects = {
 		type = "unlock-recipe",
 		recipe = "VPE-hydrotreating-raw-fuel-oil",
 	},
+	{
+		type = "unlock-recipe",
+		recipe = "clean-lubricant",
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "sulfur-separation",
+	},
 }
 data.raw.technology["oil-processing"].effects = {
 	{
@@ -83,6 +91,10 @@ data.raw.technology["oil-processing"].effects = {
 	{
 		type = "unlock-recipe",
 		recipe = "adamo-carbon-syngas-from-methane"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "solid-fuel-from-gasoline"
 	},
 }
 data.raw.technology["advanced-oil-processing"].effects = {
@@ -193,6 +205,10 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "bitumen-fractionation",
 			},
+			{
+				type = "mining-with-fluid",
+				modifier = true
+			}
 		},
 		unit = {
 			count = 50,
