@@ -301,18 +301,20 @@ data:extend({
 		},
 		fluid_boxes = {{
 			production_type = "input",
-			pipe_covers = pipecoverspictures(),
 			volume = 1000,
+			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			pipe_connections = {
-				{flow_direction="input", direction = defines.direction.north, position = {0, -0.2} }
+				{flow_direction="input", direction = defines.direction.north, position = {0, 0} }
 			}
 		},
 		{
 			production_type = "output",
-			pipe_covers = pipecoverspictures(),
 			volume = 1000,
+			pipe_covers = pipecoverspictures(),
+			pipe_picture = assembler2pipepictures(),
 			pipe_connections = { 
-				{ flow_direction="output", direction = defines.direction.south, position = {0, 0.2} }
+				{ flow_direction="output", direction = defines.direction.south, position = {0, 0} }
 			}
 		  }
 		},
@@ -377,18 +379,20 @@ fluid_gasifier.energy_source = {
 		pipe_connections = {
 			{
 				flow_direction = "input-output",
-				position = {-0.2,0},
+				position = {0,0},
 				direction = defines.direction.west
 			},
 			{
 				flow_direction = "input-output",
-				position = {0.2,0},
+				position = {0,0},
 				direction = defines.direction.east
 			}
 		},
+		production_type = "input-output",
 		volume = 1000,
 		pipe_covers = pipecoverspictures(),
-		production_type = "input-output",
+		pipe_picture = assembler2pipepictures(),
+		
 	},
 }
 data:extend({fluid_gasifier_item, fluid_gasifier})
