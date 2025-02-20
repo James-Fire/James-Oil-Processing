@@ -23,6 +23,10 @@ elseif data.raw.item["silica"] then
 	LSlib.recipe.editResult("VPE-secondary-separation", "stone", "silica", 2)
 end
 
+if (mods["space-age"]) then
+	LSlib.recipe.editResult("simple-coal-liquefaction", "heavy-oil", "VPE-fuel-oil", 1)
+end
+
 local JamesOilRecipeCategories = {
 	["james-oil-processing"] = true,
 	["james-oil-cracking"] = true,
