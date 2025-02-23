@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.16
+Date: 2. 18. 25
+  Changes:
+    - Added ElAdamo's new Carbon mod as an incompatible one.
+  Bugfixes:
+    - Fixed not making my hydrogen if bob's is active.
+    - Fixed Russian typos(?) [By isd]
+    - Fixed issue with Squeak Through causing pipes to not connect all the time [By mmmilez]
+---------------------------------------------------------------------------------------------------
+Version: 2.0.15
+Date: 2. 18. 25
+  Bugfixes:
+    - Fixed an issue where if AAI Industry loaded after my mod they fucked up my oil processing.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.14
+Date: 2. 18. 25
+  Bugfixes:
+    - You can no longer recycle stone into tar sand
+    - Fixed Fulgora oil being clean oil
+---------------------------------------------------------------------------------------------------
+Version: 2.0.13
+Date: 2. 09. 25
+  Bugfixes:
+    - Removed Carbon Black item swap is BZ Carbon is present
+---------------------------------------------------------------------------------------------------
 Version: 2.0.12
 Date: 1. 05. 25
   Features:

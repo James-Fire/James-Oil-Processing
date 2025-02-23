@@ -12,6 +12,7 @@ data:extend({
         category = "james-oil-processing",
         hidden = true,
         enabled = false,
+		auto_recycle = false,
         energy_required = 40,
 		emissions_multiplier = 3.0,
         ingredients = {
@@ -40,6 +41,7 @@ data:extend({
 		name = "natural-gas-processing",
 		category = "james-oil-processing",
 		enabled = false,
+		auto_recycle = false,
 		icon = "__James-Oil-Processing__/graphics/icons/advanced-natural-gas-processing.png",
 		icon_size = 32,
 		subgroup = "oil-aa-processing",
@@ -65,6 +67,7 @@ data:extend({
 		name = "basic-oil-processing",
 		category = "james-oil-processing",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 2,
 		ingredients =
 		{
@@ -90,6 +93,7 @@ data:extend({
         name = "VPE-fractional-vacuum-rectification",
         category = "james-oil-processing",
         enabled = false,
+		auto_recycle = false,
         energy_required = 8,
         ingredients = {
             {type="fluid", name="VPE-long-residue", amount=60},
@@ -120,6 +124,7 @@ data:extend({
 		name = "VPE-conditioning",
 		category = "james-oil-reforming",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 12,
 		ingredients =
 		{
@@ -143,6 +148,7 @@ data:extend({
 		name = "VPE-primary-separation",
 		category = "james-oil-reforming",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 8,
 		ingredients =
 		{
@@ -164,6 +170,7 @@ data:extend({
 		name = "VPE-secondary-separation",
 		category = "james-oil-reforming",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 6,
 		ingredients =
 		{
@@ -188,6 +195,7 @@ data:extend({
 		name = "bitumen-fractionation",
 		category = "james-oil-processing",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 3,
 		ingredients =
 		{

@@ -1,6 +1,5 @@
 
 --Make this stuff if bob's doesn't
-if not (mods["bobplates"]) then
 data:extend({
 	{
 		type = "item",
@@ -30,7 +29,6 @@ data:extend({
 		emissions_multiplier = 0.1
 	},
 })
-end
 
 --Fluids
 data:extend({

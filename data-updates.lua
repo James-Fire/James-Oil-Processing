@@ -8,8 +8,6 @@ if (mods["MoreScience"]) then
 end
 if (mods["bzfoundry"]) then
 	require("data/bzfoundry")
-elseif (mods["bzcarbon"]) then
-	require("data/bzcarbon")
 end
 if (mods["space-exploration"]) then
 	require("data/space-exploration")

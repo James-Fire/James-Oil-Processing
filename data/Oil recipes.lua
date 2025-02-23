@@ -2,8 +2,7 @@
 
 --Need to edit the vanilla basic and advanced oil processing
   
-  data:extend
-({
+data:extend({
 	{
         type = "recipe",
         name = "water-electroloysis",
