@@ -17,7 +17,7 @@ data:extend({
       },
       results=
       {
-        {type="fluid", name="hydrogen-sulfide", amount=20},
+        {type="fluid", name=Sulfide, amount=20},
         {type="fluid", name="petroleum-gas", amount=20},
       },
       main_product= "petroleum-gas",
@@ -40,11 +40,11 @@ data:extend({
         energy_required = 1,
         ingredients = {
             {type="fluid", name="VPE-naphta", amount=21},
-            {type="fluid", name="hydrogen", amount=4},
+            {type="fluid", name=Hydrogen, amount=8},
         },
         results = {
 			{type="fluid", name="light-oil", amount=20},
-			{type="fluid", name="hydrogen-sulfide", amount=4},
+			{type="fluid", name=Sulfide, amount=4},
         },
          icon = "__James-Oil-Processing__/graphics/naphta.png",
         icon_size = 32,
@@ -65,11 +65,11 @@ data:extend({
         energy_required = 1,
         ingredients = {
             {type="fluid", name="VPE-raw-kerosene", amount=21},
-            {type="fluid", name="hydrogen", amount=4},
+            {type="fluid", name=Hydrogen, amount=8},
         },
         results = {
 			{type="fluid", name="VPE-kerosene", amount=20},
-			{type="fluid", name="hydrogen-sulfide", amount=4},
+			{type="fluid", name=Sulfide, amount=4},
         },
          icon = "__James-Oil-Processing__/graphics/kerosene.png",
         icon_size = 32,
@@ -90,11 +90,11 @@ data:extend({
         energy_required = 1,
         ingredients = {
             {type="fluid", name="VPE-fuel-oil", amount=21},
-            {type="fluid", name="hydrogen", amount=4},
+            {type="fluid", name=Hydrogen, amount=8},
         },
         results = {
 			{type="fluid", name="heavy-oil", amount=20},
-			{type="fluid", name="hydrogen-sulfide", amount=4},
+			{type="fluid", name=Sulfide, amount=4},
         },
          icon = "__James-Oil-Processing__/graphics/fuel-oil.png",
         icon_size = 32,

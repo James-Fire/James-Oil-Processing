@@ -55,7 +55,7 @@ data:extend({
 			{type="fluid", name="VPE-naphta", amount=2},
 			{type="fluid", name="sour-gas", amount=5},
 			{type="fluid", name="adamo-carbon-methane", amount=40},
-			{type="fluid", name="hydrogen-sulfide", amount=20},
+			{type="fluid", name=Sulfide, amount=20},
 		},
 	}
 })

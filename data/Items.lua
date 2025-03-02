@@ -25,7 +25,7 @@ data:extend({
 		icon_size = 64,
 		order = "a[fluid]-g[hydrogen]",
 		gas_temperature = -252.76,
-		fuel_value = "90kJ",
+		fuel_value = "45kJ",
 		emissions_multiplier = 0.1
 	},
 })

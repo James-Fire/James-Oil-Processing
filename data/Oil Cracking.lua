@@ -212,7 +212,7 @@ data:extend({
         energy_required = 3,
         ingredients = {
             {type="fluid", name="heavy-oil", amount=25}, --54
-            {type="fluid", name="hydrogen", amount=5},
+            {type="fluid", name=Hydrogen, amount=10},
 			 
         },
         results = {

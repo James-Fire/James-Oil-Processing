@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.18
+Date: 3. 02. 25
+  Changes:
+    - If Bob's is active, use his fluids
+    - Halved my hydrogen fuel value and doubled production and usage values, to be in line with bob's
+---------------------------------------------------------------------------------------------------
+Version: 2.0.17
+Date: 2. 24. 25
+  Bugfixes:
+    - Fixed someone else's parser fuckup
+    - Fixed referring to the wrong bob fluid
+---------------------------------------------------------------------------------------------------
 Version: 2.0.16
 Date: 2. 23. 25
   Changes:
@@ -33,7 +45,7 @@ Version: 2.0.11
 Date: 12. 14. 24
   Bugfixes:
     - Localized Gasoline Solid Fuel recipe because it doesn't happen automatically anymore.
-	- Fixed icon sizing on gasoline solid fuel recipe
+    - Fixed icon sizing on gasoline solid fuel recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 12. 13. 24
@@ -127,10 +139,10 @@ Date: 26. 04. 23
   Bugfixes:
     - Fractionator Entity Icons now also show their fuel input type
     - Fixed the Gasifier fluidboxes being *weird*
-	- Fixed the changelog using tabs so it can't show up in-game
-	- Localised the Methane Reforming recipe
-	- Locked the Gasifier recipe behind the same tech as the Gasifier
-	- Locked all the fractionators behind having oil
+    - Fixed the changelog using tabs so it can't show up in-game
+    - Localised the Methane Reforming recipe
+    - Locked the Gasifier recipe behind the same tech as the Gasifier
+    - Locked all the fractionators behind having oil
     - Fixed infinite syngas
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4

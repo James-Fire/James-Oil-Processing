@@ -74,19 +74,19 @@ table.insert(JamesOilProductivity, "plastic-bar-from-syngas")
 table.insert(JamesOilProductivity, "sulfur-plastic-bar-from-syngas")
 
 --Conditional Plastic Recipes
-if (mods["bobplates"]) then
+if data.raw.fluid["bob-chlorine"] then
 	LSlib.recipe.duplicate("plastic-bar", "chlorine-plastic-bar")
-	LSlib.recipe.addIngredient("chlorine-plastic-bar", "chlorine", 15, "fluid")
+	LSlib.recipe.addIngredient("chlorine-plastic-bar", "bob-chlorine", 15, "fluid")
 	LSlib.recipe.editIngredient("chlorine-plastic-bar", "VPE-olefines", "VPE-olefines", 1/2)
 	LSlib.technology.addRecipeUnlock("plastics", "chlorine-plastic-bar")
 	
 	LSlib.recipe.duplicate("plastic-bar-from-aromatics", "chlorine-aromatics-plastic-bar")
-	LSlib.recipe.addIngredient("chlorine-aromatics-plastic-bar", "chlorine", 15, "fluid")
+	LSlib.recipe.addIngredient("chlorine-aromatics-plastic-bar", "bob-chlorine", 15, "fluid")
 	LSlib.recipe.editIngredient("chlorine-aromatics-plastic-bar", "VPE-aromatics", "VPE-aromatics", 1/2)
 	LSlib.technology.addRecipeUnlock("advanced-oil-processing", "chlorine-aromatics-plastic-bar")
 	
 	LSlib.recipe.duplicate("plastic-bar-from-syngas", "chlorine-syngas-plastic-bar")
-	LSlib.recipe.addIngredient("chlorine-syngas-plastic-bar", "chlorine", 10, "fluid")
+	LSlib.recipe.addIngredient("chlorine-syngas-plastic-bar", "bob-chlorine", 10, "fluid")
 	LSlib.recipe.editIngredient("chlorine-syngas-plastic-bar", "adamo-carbon-syngas", "adamo-carbon-syngas", 1/2)
 	LSlib.technology.addRecipeUnlock("coal-liquefaction", "chlorine-syngas-plastic-bar")
 	
@@ -127,7 +127,7 @@ data:extend({
         enabled = false,
         energy_required = 15,
         ingredients = {
-            {type="fluid", name="hydrogen", amount=150},
+            {type="fluid", name=Hydrogen, amount=300},
     
         },
         results = {

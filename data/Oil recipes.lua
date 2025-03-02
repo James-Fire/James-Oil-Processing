@@ -14,7 +14,7 @@ data:extend({
             
         },
         results = {
-            {type="fluid", name="hydrogen", amount=10},
+            {type="fluid", name=Hydrogen, amount=20},
 	    
         },
          icon = "__James-Oil-Processing__/graphics/hydrogen.png",

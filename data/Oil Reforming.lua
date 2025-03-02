@@ -79,7 +79,7 @@ data:extend({
         },
         results = {
 			{type="fluid", name="VPE-olefines", amount=70},
-            {type="fluid", name="hydrogen", amount=30},
+            {type="fluid", name=Hydrogen, amount=60},
 	    
         },
 		icons = {
@@ -180,7 +180,7 @@ data:extend({
         },
         results = {
 			{type="fluid", name="VPE-reformate", amount=80},
-			{type="fluid", name="hydrogen", amount=30},
+			{type="fluid", name=Hydrogen, amount=60},
             {type="fluid", name="petroleum-gas", amount=20},
         },
         icon = "__James-Oil-Processing__/graphics/reformate.png",
