@@ -1,12 +1,15 @@
 require("__LSlib_James_Fork__/LSlib")
 
 
-if not (mods["bobplates"]) then
-Hydrogen = "bob-hydrogen"
-Sulfide = "bob-hydrogen-sulfide"
+if (mods["bobplates"]) then
+	Hydrogen = "bob-hydrogen"
 else
-Hydrogen = "hydrogen"
-Sulfide = "hydrogen-sulfide"
+	Hydrogen = "hydrogen"
+end
+if (mods["bobrevamp"]) then
+	Sulfide = "bob-hydrogen-sulfide"
+else
+	Sulfide = "hydrogen-sulfide"
 end
 
 require("data/Oil Buildings")
