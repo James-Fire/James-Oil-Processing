@@ -24,7 +24,7 @@ data:extend({
 		results = {
 			{
 				type="fluid",
-				name="hydrogen",
+				name=Hydrogen,
 				amount=75
 			},
 			{
