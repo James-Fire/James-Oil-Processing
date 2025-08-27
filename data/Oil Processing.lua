@@ -59,6 +59,9 @@ data:extend({
 		},
 	}
 })
+if data.raw.fluid["bob-sour-gas"] then
+	LSlib.recipe.editResult("natural-gas-processing", "sour-gas", "bob-sour-gas", 1)
+end
 
 --Crude Oil
 data:extend({
@@ -117,6 +120,10 @@ data:extend({
         }
     },
 })
+if data.raw.fluid["bob-sour-gas"] then
+	LSlib.recipe.editResult("basic-oil-processing", "sour-gas", "bob-sour-gas", 1)
+end
+
 --Tar Sand
 data:extend({
 	{

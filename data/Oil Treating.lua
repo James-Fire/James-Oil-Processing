@@ -2,6 +2,7 @@
 
 
 --Separation
+if data.raw.fluid["bob-sour-gas"] then else
 data:extend({
     {
       type = "recipe",
@@ -29,6 +30,7 @@ data:extend({
       }
     },
 })
+end
 
 --Hydrotreating
 data:extend({
