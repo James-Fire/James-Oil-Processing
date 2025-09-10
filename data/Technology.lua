@@ -16,10 +16,6 @@ data.raw.technology["sulfur-processing"].effects = {
 	},
 	{
 		type = "unlock-recipe",
-		recipe = "petroleum-gas-sweetening",
-	},
-	{
-		type = "unlock-recipe",
 		recipe = "VPE-hydrotreating-raw-naphta",
 	},
 	{
@@ -39,6 +35,65 @@ data.raw.technology["sulfur-processing"].effects = {
 		recipe = "sulfur-separation",
 	},
 }
+if data.raw.fluid["bob-sour-gas"] then 
+	data.raw.technology["sulfur-processing"].effects = {
+		{
+			type = "unlock-recipe",
+			recipe = "sulfuric-acid"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-naphta",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-kerosene",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-fuel-oil",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "clean-lubricant",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "sulfur-separation",
+		},
+	}
+else
+	data.raw.technology["sulfur-processing"].effects = {
+		{
+			type = "unlock-recipe",
+			recipe = "sulfuric-acid"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "petroleum-gas-sweetening",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-naphta",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-kerosene",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "VPE-hydrotreating-raw-fuel-oil",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "clean-lubricant",
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "sulfur-separation",
+		},
+	}
+end
 data.raw.technology["oil-processing"].effects = {
 	{
 		type = "unlock-recipe",
