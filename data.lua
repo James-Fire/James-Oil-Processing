@@ -1,12 +1,14 @@
 require("__LSlib_James_Fork__/LSlib")
 
 
-if (mods["bobplates"]) then
+if data.raw.fluid["bob-hydrogen"] then
 	Hydrogen = "bob-hydrogen"
+elseif data.raw.fluid["kr-hydrogen"] then
+	Hydrogen = "kr-hydrogen"
 else
 	Hydrogen = "hydrogen"
 end
-if (mods["bobrevamp"]) then
+if data.raw.fluid["bob-hydrogen-sulfide"] then
 	Sulfide = "bob-hydrogen-sulfide"
 else
 	Sulfide = "hydrogen-sulfide"

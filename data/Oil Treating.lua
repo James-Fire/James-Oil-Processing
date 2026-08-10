@@ -1,5 +1,33 @@
 --Treating Oil to remove impurities. Sulfur, mostly.
 
+--Electrolysis to get hydrogen
+data:extend({
+	{
+        type = "recipe",
+        name = "water-electroloysis",
+        category = "chemistry",
+        enabled = true,
+        energy_required = 10,
+        ingredients = {
+            {type="fluid", name="water", amount=5},
+            
+        },
+        results = {
+            {type="fluid", name=Hydrogen, amount=20},
+	    
+        },
+        icon = "__James-Oil-Processing__/graphics/hydrogen.png",
+        icon_size = 32,
+        subgroup = "fluid-recipes",
+        order = "a[oil-processing]-b[coke]",
+        crafting_machine_tint =
+        {
+          primary = {r = 0.698, g = 0.698, b = 0.698, a = 0.000}, -- #7f7f7f00
+          secondary = {r = 0.400, g = 0.400, b = 0.400, a = 0.000}, -- #66666600
+          tertiary = {r = 0.305, g = 0.305, b = 0.305, a = 0.000}, -- #4d4d4d00
+        }
+    },
+})
 
 --Separation
 if data.raw.fluid["bob-sour-gas"] then else

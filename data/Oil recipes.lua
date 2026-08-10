@@ -17,7 +17,7 @@ data:extend({
             {type="fluid", name=Hydrogen, amount=20},
 	    
         },
-         icon = "__James-Oil-Processing__/graphics/hydrogen.png",
+        icon = "__James-Oil-Processing__/graphics/hydrogen.png",
         icon_size = 32,
         subgroup = "fluid-recipes",
         order = "a[oil-processing]-b[coke]",
