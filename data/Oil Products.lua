@@ -15,7 +15,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "plastic-bar",
-		category = "chemistry",
+		categories = { "chemistry" },
 		energy_required = 2,
 		subgroup = "oil-ee-plastics",
 		enabled = false,
@@ -100,7 +100,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-rocketfuel-from-kerosene",
-        category = "chemistry",
+        categories = { "chemistry" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -123,7 +123,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-rocketfuel-from-hydrogen",
-        category = "chemistry",
+        categories = { "chemistry" },
         enabled = false,
         energy_required = 15,
         ingredients = {
@@ -164,7 +164,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sulfur-separation",
-		category = "chemistry",
+		categories = { "chemistry" },
 		subgroup = "fluid-recipes",
 		order = "f[sulfur]",
 		energy_required = 1,
@@ -197,7 +197,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "solid-fuel-from-gasoline",
-		category = "chemistry",
+		categories = { "chemistry" },
 		energy_required = 2,
 		ingredients = {{
 				type = "fluid",

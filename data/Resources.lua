@@ -28,7 +28,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"placeable-neutral"},
 		order="a-b-e",
-		tree_removal_probability = 0,
+		tree_removal_independent_probability = 0,
 		tree_removal_max_distance = 62 * 62,
 		minable =
 		{
@@ -91,7 +91,7 @@ data:extend({
 		normal = 1000000,
 		infinite_depletion_amount = 30,
 		resource_patch_search_radius = 12,
-		tree_removal_probability = 0.7,
+		tree_removal_independent_probability = 0.7,
 		tree_removal_max_distance = 32 * 32,
 		minable = {
 			mining_time = 1,
@@ -101,7 +101,7 @@ data:extend({
 					name = "adamo-carbon-natural-gas",
 					amount_min = 30,
 					amount_max = 30,
-					probability = 1
+					independent_probability = 1
 				}
 			}
 		},
@@ -113,7 +113,7 @@ data:extend({
 			order = "d",
 			base_density = 10,
 			base_spots_per_km2 = 2,
-			random_probability = 1/42,
+			random_independent_probability = 1/42,
 			random_spot_size_minimum = 1,
 			random_spot_size_maximum = 1,
 			additional_richness = 220000,

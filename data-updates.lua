@@ -50,8 +50,13 @@ end
 
 --Add all recipes in my recipe categories to the productivity list
 for name, recipe in pairs(data.raw.recipe) do
-	if recipe.category and JamesOilRecipeCategories[recipe.category] then
-		table.insert(JamesOilProductivity, recipe.name)
+	if recipe.categories then
+		for k, category in pairs(recipe.categories) do
+			if JamesOilRecipeCategories[category] then
+				table.insert(JamesOilProductivity, recipe.name)
+				break
+			end
+		end
 	end
 end
 

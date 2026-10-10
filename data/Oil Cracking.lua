@@ -5,7 +5,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-steam-cracking-kerosene",
-        category = "james-oil-cracking",
+        categories = { "james-oil-cracking" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -48,7 +48,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-steam-cracking-naphta",
-        category = "james-oil-cracking",
+        categories = { "james-oil-cracking" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -91,7 +91,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-steam-cracking-petroleum-gas",
-        category = "james-oil-cracking",
+        categories = { "james-oil-cracking" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -145,7 +145,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "adamo-carbon-petroleum-gas-cracking",
-		category = "james-oil-cracking",
+		categories = { "james-oil-cracking" },
 		enabled = false,
 		energy_required = 1,
 		ingredients = {
@@ -207,7 +207,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-hydrocracking-fuel-oil",
-        category = "james-oil-cracking",
+        categories = { "james-oil-cracking" },
         enabled = false,
         energy_required = 3,
         ingredients = {

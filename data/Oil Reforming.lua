@@ -6,7 +6,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "adamo-carbon-syngas-from-methane",
-		category = "james-oil-reforming",
+		categories = { "james-oil-reforming" },
 		enabled = false,
 		energy_required = 2.5,
 		ingredients = {
@@ -70,7 +70,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-dehydrogenation-petroleum-gas",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -118,7 +118,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-btx-process",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -172,7 +172,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-catalytic-reforming-naphta",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -197,7 +197,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-extract-aromatics-from-reformate",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -244,7 +244,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-convert-reformate-to-gasoline",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 8,
         ingredients = {
@@ -273,7 +273,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "adamo-carbon-syngas-from-fuel",
-		category = "adamo-carbon-gasification",
+		categories = { "adamo-carbon-gasification" },
 		enabled = false,
 		energy_required = 0.2,
 		ingredients = {{ 
@@ -292,7 +292,7 @@ data:extend({
 {
 	type = "recipe",
 	name = "adamo-carbon-heavy-oil-from-syngas",
-	category = "james-oil-reforming",
+	categories = { "james-oil-reforming" },
 	enabled = false,
 	energy_required = 10,
 	ingredients = {{
@@ -328,7 +328,7 @@ data:extend({
 {
 	type = "recipe",
 	name = "kerosene-from-syngas",
-	category = "james-oil-reforming",
+	categories = { "james-oil-reforming" },
 	enabled = false,
 	energy_required = 10,
 	ingredients = {{
@@ -364,7 +364,7 @@ data:extend({
 {
 	type = "recipe",
 	name = "adamo-carbon-light-oil-from-syngas",
-	category = "james-oil-reforming",
+	categories = { "james-oil-reforming" },
 	enabled = false,
 	energy_required = 10,
 	ingredients = {{
@@ -397,7 +397,7 @@ data:extend({
 {
 	type = "recipe",
 	name = "adamo-carbon-petroleum-gas-from-syngas",
-	category = "james-oil-reforming",
+	categories = { "james-oil-reforming" },
 	enabled = false,
 	energy_required = 10,
 	ingredients = {
@@ -442,7 +442,7 @@ data:extend({
 	{
         type = "recipe",
         name = "blend-naphta-and-pygas",
-        category = "james-oil-reforming",
+        categories = { "james-oil-reforming" },
         enabled = false,
         energy_required = 4,
         ingredients = {

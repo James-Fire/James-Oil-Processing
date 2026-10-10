@@ -3,7 +3,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "basic-oil-processing",
-		category = "james-oil-processing",
+		categories = { "james-oil-processing" },
 		enabled = false,
 		energy_required = 2,
 		ingredients =

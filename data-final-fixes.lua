@@ -20,7 +20,7 @@ if mods["aai-industry"] then
 		{
 			type = "recipe",
 			name = "basic-oil-processing",
-			category = "james-oil-processing",
+			categories = { "james-oil-processing" },
 			enabled = false,
 			auto_recycle = false,
 			energy_required = 2,

@@ -9,7 +9,7 @@ data:extend({
 	{ --Gotta rework this to use fracking fluid
         type = "recipe",
         name = "VPE-gas-fracking",
-        category = "james-oil-processing",
+        categories = { "james-oil-processing" },
         hidden = true,
         enabled = false,
 		auto_recycle = false,
@@ -39,7 +39,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "natural-gas-processing",
-		category = "james-oil-processing",
+		categories = { "james-oil-processing" },
 		enabled = false,
 		auto_recycle = false,
 		icon = "__James-Oil-Processing__/graphics/icons/advanced-natural-gas-processing.png",
@@ -68,7 +68,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "basic-oil-processing",
-		category = "james-oil-processing",
+		categories = { "james-oil-processing" },
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 2,
@@ -94,7 +94,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-fractional-vacuum-rectification",
-        category = "james-oil-processing",
+        categories = { "james-oil-processing" },
         enabled = false,
 		auto_recycle = false,
         energy_required = 8,
@@ -129,7 +129,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "VPE-conditioning",
-		category = "james-oil-reforming",
+		categories = { "james-oil-reforming" },
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 12,
@@ -153,7 +153,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "VPE-primary-separation",
-		category = "james-oil-reforming",
+		categories = { "james-oil-reforming" },
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 8,
@@ -175,7 +175,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "VPE-secondary-separation",
-		category = "james-oil-reforming",
+		categories = { "james-oil-reforming" },
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 6,
@@ -200,7 +200,7 @@ data:extend({
 	{ --Might add a Bitumen with Crude fractionation
 		type = "recipe",
 		name = "bitumen-fractionation",
-		category = "james-oil-processing",
+		categories = { "james-oil-processing" },
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 3,

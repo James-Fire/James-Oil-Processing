@@ -23,7 +23,7 @@ for _, fluid in pairs(OilFluids) do
 		icon_mipmaps = fluid.icon_mipmaps,
 		icons = fluid.icons,
 		stack_size = 1500,
-		fuel_category = "Diesel-Locomotive-fluid",
+		fuel_categories = { "Diesel-Locomotive-fluid" },
 		flags = {"hidden"},
 		name = "Diesel-Locomotive-"..fluid.name,
 		localised_name = {"", {fluid.name}},

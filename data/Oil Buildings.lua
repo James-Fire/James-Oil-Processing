@@ -303,7 +303,7 @@ data:extend({
 			production_type = "input",
 			volume = 1000,
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			pipe_connections = {
 				{flow_direction="input", direction = defines.direction.north, position = {0, 0} }
 			}
@@ -312,7 +312,7 @@ data:extend({
 			production_type = "output",
 			volume = 1000,
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			pipe_connections = { 
 				{ flow_direction="output", direction = defines.direction.south, position = {0, 0} }
 			}
@@ -391,7 +391,7 @@ fluid_gasifier.energy_source = {
 		production_type = "input-output",
 		volume = 1000,
 		pipe_covers = pipecoverspictures(),
-		pipe_picture = assembler2pipepictures(),
+		pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 		
 	},
 }
@@ -476,42 +476,42 @@ data:extend({
 		  {
 			production_type = "input",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1.15, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 2} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ direction = defines.direction.east, position = {1.15, 0} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ direction = defines.direction.east, position = {1.15, -1} }}
 		  },
 		  {
 			production_type = "output",
 			pipe_covers = pipecoverspictures(),
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 			volume = 1000,
 			pipe_connections = {{ direction = defines.direction.east, position = {1.15, -2} }}
 		  },
@@ -910,7 +910,7 @@ fluid_fractionator.energy_source = {
 		},
 		volume = 2000,
 		pipe_covers = pipecoverspictures(),
-		pipe_picture = assembler2pipepictures(),
+		pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
 		production_type = "input-output",
 	},
 }

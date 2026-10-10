@@ -5,7 +5,7 @@ data:extend({
 	{
         type = "recipe",
         name = "water-electroloysis",
-        category = "chemistry",
+        categories = { "chemistry" },
         enabled = true,
         energy_required = 10,
         ingredients = {
@@ -35,7 +35,7 @@ data:extend({
     {
       type = "recipe",
       name = "petroleum-gas-sweetening",
-      category = "james-oil-treating",
+      categories = { "james-oil-treating" },
       subgroup = "oil-dd-treating",
       order = "aaa",
       energy_required = 1,
@@ -65,7 +65,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-hydrotreating-raw-naphta",
-        category = "james-oil-treating",
+        categories = { "james-oil-treating" },
         enabled = false,
         energy_required = 1,
         ingredients = {
@@ -90,7 +90,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-hydrotreating-raw-kerosene",
-        category = "james-oil-treating",
+        categories = { "james-oil-treating" },
         enabled = false,
         energy_required = 1,
         ingredients = {
@@ -115,7 +115,7 @@ data:extend({
 	{
         type = "recipe",
         name = "VPE-hydrotreating-raw-fuel-oil",
-        category = "james-oil-treating",
+        categories = { "james-oil-treating" },
         enabled = false,
         energy_required = 1,
         ingredients = {

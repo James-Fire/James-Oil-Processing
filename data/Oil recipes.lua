@@ -6,7 +6,7 @@ data:extend({
 	{
         type = "recipe",
         name = "water-electroloysis",
-        category = "chemistry",
+        categories = { "chemistry" },
         enabled = true,
         energy_required = 10,
         ingredients = {
