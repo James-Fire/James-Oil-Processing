@@ -1,5 +1,41 @@
 LSlib.technology.addRecipeUnlock("advanced-oil-processing", "sulfur-plastic-bar-from-aromatics")
 
+--Disallow quality modules in recipes that only make fluids
+NoQualityRecipes = {
+	"VPE-steam-cracking-kerosene",
+	"VPE-steam-cracking-gasoline",
+	"VPE-steam-cracking-naphta",
+	"VPE-steam-cracking-petroleum-gas",
+	"adamo-carbon-petroleum-gas-cracking",
+	"VPE-hydrocracking-fuel-oil",
+	"natural-gas-processing",
+	"basic-oil-processing",
+	"bitumen-fractionation",
+	"water-electroloysis",
+	"VPE-dehydrogenation-petroleum-gas",
+	"VPE-btx-process",
+	"VPE-catalytic-reforming-naphta",
+	"VPE-extract-aromatics-from-reformate",
+	"VPE-convert-reformate-to-gasoline",
+	"adamo-carbon-syngas-from-fuel",
+	"adamo-carbon-heavy-oil-from-syngas",
+	"adamo-carbon-light-oil-from-syngas",
+	"adamo-carbon-petroleum-gas-from-syngas",
+	"kerosene-from-syngas",
+	"blend-naphta-and-pygas",
+	"petroleum-gas-sweetening",
+	"VPE-hydrotreating-raw-naphta",
+	"VPE-hydrotreating-raw-kerosene",
+	"VPE-hydrotreating-raw-fuel-oil",
+}
+if mods["quality"] then
+	for i, recipe_name in pairs(NoQualityRecipes) do
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].allow_quality = false
+		end
+	end
+end
+
 --Fix fulgora oil
 if mods["space-age"] then
     -- Patch the shallow oil ocean
